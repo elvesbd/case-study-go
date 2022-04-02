@@ -36,7 +36,7 @@ func (da Adapter) CloseDbConnection() {
 }
 
 func (da Adapter) AddToHistory(answer int32, operation string) error {
-	queryString, args, err := sq.Insert("airth_history").Columns("date", "answer", "operation").
+	queryString, args, err := sq.Insert("arith_history").Columns("date", "answer", "operation").
 		Values(time.Now(), answer, operation).ToSql()
 	if err != nil {
 		return err
