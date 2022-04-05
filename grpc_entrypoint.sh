@@ -14,3 +14,5 @@ if [ "$maxTries" -le 0]; then
   echo >&2 'error: unable to contact mysql after 10 tries'
   exit 1
 fi
+
+exec $COMMAND
